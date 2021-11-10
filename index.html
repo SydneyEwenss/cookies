@@ -1,1 +1,54 @@
-<h1>poo</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sydney's cookie clicker</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="title">
+		<h1>Sydney's cookie clicker!</h1>
+	</div>
+	
+	<div class="cookie">
+		<img src="1.png" width="250px" onclick="makeCookie(1)">
+	</div>
+
+	<div class="cookies">
+		<h2><span id="cookies">0</span> cookies</h2>
+	</div>
+
+	<div class="cursors">
+		<button onclick="buyCursors()">Pointer [<span id="cursorPrice">15</span>] -- <span id="cursors">0</span></button>
+	</div>
+
+
+	<script>
+		var cookies = 0;
+
+		var cursors = 0;
+		var cursorPrice = 15;
+
+		function makeCookie(clickPower) {
+			cookies = cookies + clickPower;
+			document.getElementById('cookies').innerHTML = Math.round(cookies);
+		}
+
+		function buyCursors() {
+			if (cookies >= cursorPrice) {
+				cookies = cookies - cursorPrice;
+				cursors = cursors + 1;
+				cursorPrice = Math.round(cursorPrice * 1.25);
+
+				document.getElementById('cookies').innerHTML = Math.round(cookies);
+				document.getElementById('cursorPrice').innerHTML = cursorPrice;
+				document.getElementById('cursors').innerHTML = cursors;
+			}
+		}
+
+		setInterval(function() {
+			cookies = cookies + cursors /10;
+			document.getElementById('cookies').innerHTML = Math.round(cookies);
+		}, 100);
+	</script>
+</body>
+</html>
