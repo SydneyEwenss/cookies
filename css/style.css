@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+.title{
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.cookie{
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translate(-50%,-50%);
+}
+
+.cookies{
+	position: absolute;
+	top: 36%;
+	left: 10%;
+	transform: translate(-50%,-50%);
+}
+
+.cursors{
+	position: absolute;
+	top: 2%;
+	left: 95%;
+	transform: translate(-50%,-50%);
+}
